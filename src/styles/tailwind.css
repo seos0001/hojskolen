@@ -1,8 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+@plugin "daisyui";
+ {
+}
 
 @theme {
   /* Her tilføjes theme variable // tokens */
@@ -18,9 +21,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }

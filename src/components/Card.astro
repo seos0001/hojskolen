@@ -1,34 +1,49 @@
 ---
-import bjergCard from '../assets/images/bjerg_card.webp';
+const {
+  land1,
+  sommerSkole,
+  cardTitle,
+  cardTitleBagside,
+  cardTextForside,
+  cardTextBagside,
+  cardImage,
+  cardImageAlt,
+  rejsedato,
+} = Astro.props;
 ---
-
-<a href="/eventyr" class="card bg-base-100 w-96 shadow-md">
-  <figure>
+<div class="card bg-base-100 w-full shadow-sm border-r-0">
+  <figure class="border-r-0">
     <img
-      src={bjergCard} alt="Bjerg"
-      class="h-60 w-full object-cover"
-    />
+      src={cardImage}
+      alt="Shoes" class="border-r-0"/>
   </figure>
-  <div class="card-body text-center">
-    <div class="text-2xl font-light leading-snug space-y-1">
-      <p>HAWAII</p>
-      <p>GILI ISLANDS</p>
-      <p>BALI</p>
-      <p>AUSTRALIEN</p>
-      <p>JAPAN</p>
-    </div>
-    <div class="flex justify-between text-sm font-light mt-4">
-      <div class="text-left">
-        <p class="text-gray-500">Næste rejse</p>
-        <p>15. januar 2026</p>
-      </div>
-      <div class="text-right">
-        <p class="text-gray-500">Pris</p>
-        <p>74.900 DKK</p>
-      </div>
+  <div class="grid grid-cols-2 grid-rows-3 bg-amber-500">
+    <div class="text-xl">{land1}</div>
+    <div class="text-xl text-right">text 2</div>
+    <div class="text-xl">text 3</div>
+    <div class="text-xl text-right">text 4</div>
+    <div class="text-xl">text 5</div>
+    <div class="text-xl text-right">text 6</div>
+  </div>
+  <div class="card-body bg-amber-500 border-r-0">
+    <h2 class="card-title">{cardTitle}</h2>
+    <p>{cardTextForside}</p>
+    <div class="grid grid-cols-2 bg-amber-500">
+     <div>
+        <div class="">Næste rejse</div>
+        <div class="næsterejsedato">{rejsedato}</div>
+     </div>
+     <div>
+        <div class="text-xl">pris</div>
+        <div class="næsterejsedato">pristal</div>
+     </div>
+      
     </div>
   </div>
-</a>
+</div>
+
+
+
 
 
 

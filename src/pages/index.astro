@@ -5,8 +5,8 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import hero from "../assets/images/hero.webp";
 import Card from "../components/Card.astro";
+import bjerg_card from"../assets/images/bjerg_card.webp";
 ---
 
 <MainLayout>
@@ -15,31 +15,20 @@ import Card from "../components/Card.astro";
     
     <!-- Baggrundsbillede -->
     <img
-      src={hero.src}
+      src={bjerg_card.src}
       alt="Hero Billede"
       class="absolute inset-0 w-full h-full object-cover z-0"
     />
 
-    <!-- Orange overlay -->
-    <div class="absolute inset-0 bg-[#FF5900]/80 z-10"></div>
-
-    <!-- Content -->
-    <div class="relative z-20 max-w-4xl text-center px-4">
-      <h1 class="font-italiana text-[3rem] sm:text-[4rem] md:text-[5rem] leading-[1.1] tracking-tight mb-6 text-white">
-        HÖJSKOLEN DK
-      </h1>
-
-      <p class="text-lg md:text-xl italic mb-2 text-white/90">Højskole i udlandet</p>
-      <p class="text-lg md:text-xl mb-6 text-white/90">Et eventyr for livet – opdag, lær og oplev verden</p>
+   <!-- Content -->
+<div class="relative z-20 max-w-4xl text-left px-4">
+  <p class="font-italiana text-[4rem] sm:text-[5rem] md:text-[6rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
+    HØJSKOLE I UDLANDET - EVENTYR FOR LIVET
+  </p>
+</div>
 
       <!-- Buttons -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="/card"
-          class="bg-white text-[#FF5900] px-8 md:px-10 py-3 rounded-full hover:bg-black hover:text-white transition text-sm md:text-base font-semibold"
-        >
-          TILMELD INFOMØDE
-        </a>
         <a
           href="/om-os"
           class="border border-white text-white px-8 md:px-10 py-3 rounded-full hover:bg-white hover:text-[#FF5900] transition text-sm md:text-base font-semibold"
@@ -59,10 +48,10 @@ import Card from "../components/Card.astro";
       <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
         ER DU KLAR TIL DIT <br /> LIVS EVENTYR?
       </h2>
-      <p class="mb-6 text-base md:text-lg font-sans">
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
         HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år, der brænder for oplevelser, fællesskab og at møde nye kulturer. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor du får både rejseeventyr og stærke fællesskaber.
       </p>
-      <p class="mb-6 text-base md:text-lg font-sans">
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
         HÖJSKOLENDK er for dig, hvis du drømmer om at rejse med rygsæk, lære om fremmede kulturer, opleve et stærkt fællesskab og få inspirerende undervisning. Du vil være en del af en fantastisk grupperejse sammen med andre unge, og du kan føle dig tryg, da vi er medlem af Rejsegarantifonden.<br />
         Vi glæder os til at lære dig at kende!
       </p>
@@ -110,15 +99,15 @@ import Card from "../components/Card.astro";
     REJSE HØJSKOLE
   </h2>
 
-  <p class="mb-4 text-base md:text-lg font-sans">
+  <p class="mb-4 text-base md:text-lg font-sans font-thin">
     Tag på højskole i udlandet og oplev et unikt rejseeventyr med stærkt fællesskab og fantastiske oplevelser.
   </p>
 
-  <p class="mb-4 text-base md:text-lg font-sans">
+  <p class="mb-4 text-base md:text-lg font-sans font-thin">
     Med fokus på fællesskab og dannelse kan du bruge dit sabbatår på frivilligt arbejde, vilde adventure- og naturoplevelser, sprogindlæring og personlig udvikling, der styrker din selvtillid og selvindsigt.
   </p>
 
-  <p class="mb-4 text-base md:text-lg font-sans">
+  <p class="mb-4 text-base md:text-lg font-sans font-thin">
     Glæd dig til inspirerende undervisning, der kombinerer læring med leg. Udover et fantastisk eventyr handler det om at finde ud af, hvad der er vigtigt for dig – om at flytte dine grænser og blive en stærkere version af dig selv.
     Vi tror på, at du kommer hjem med mere mod på livet og en klarere vision for din fremtid.
   </p>
@@ -130,8 +119,128 @@ import Card from "../components/Card.astro";
    "Oplev verden, lev dine rejsedrømme og få et eventyr for livet."
   </h2>
     </div>
+
     </div>
 </section>
+<section class="grid grid-cols-3 mx-auto gap-4 max-w-7xl mb-24">
+  <Card
+        cardTitle="Rejse 1"
+        land1="Hawaii"
+        cardTitleBagside=""
+        cardTextForside="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        cardTextBagside=""
+        cardImage="bjerg_card.webp"
+        cardImageAlt="bjerg_card"
+        rejsedato ="15. januar 2025"
+    />
+      <Card
+        cardTitle="Rejse 2"
+        land1="AUSTRALIEN"
+        cardTitleBagside=""
+        cardTextForside="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        cardTextBagside=""
+        cardImage="bjerg_card.webp"
+        cardImageAlt="bjerg_card"
+        rejsedato ="20. marts 2025"
+    />
+    <Card
+        cardTitle="Rejse 3"
+        land1="INDIEN"
+        cardTitleBagside=""
+        cardTextForside="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        cardTextBagside=""
+        cardImage="bjerg_card.webp"
+        cardImageAlt="bjerg_card"
+        rejsedato = "20. juni 2025"
+    />
+</section>
+
+<section class="grid grid-cols-3 mx-auto gap-4 max-w-7xl mb-24">
+  <Card
+        cardTitle="Rejse 1"
+        land1="Hawaiio"
+        cardTitleBagside=""
+        cardTextForside="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        cardTextBagside=""
+        cardImage="bjerg_card.webp"
+        cardImageAlt="bjerg_card"
+        rejsedato ="2024-05-01"
+    />
+      <Card
+        cardTitle="Rejse 2"
+        land1="Færoerne"
+        cardTitleBagside=""
+        cardTextForside="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        cardTextBagside=""
+        cardImage="bjerg_card.webp"
+        cardImageAlt="bjerg_card"
+        rejsedato ="1. jini 20245"
+    />
+    <Card
+        cardTitle="Rejse 3"
+        land1="Stockholm"
+        cardTitleBagside=""
+        cardTextForside="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        cardTextBagside=""
+        cardImage="bjerg_card.webp"
+        cardImageAlt="bjerg_card"
+        rejsedato = "1. jini 20245"
+    />
+</section>
+
+
+    <!-- Citat 2 -->
+    <div class="text-center space-y-2 px-15 sm:px-8 uppercase">
+  <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight mb-6">
+   "UFORGLEMMELIGT HØJSKOLEOPHOLD I UDLANDET"
+  </h2>
+    </div>
+
+      <!-- Højskole i Udlandet SEKTION -->
+<section class="bg-[#f4f2ec] py-16 px-6 md:px-20 font-serif">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Tekstindhold -->
+    <div>
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      Højskole i udlandet for unge – en oplevelse for livet Vil du kombinere rejse, fællesskab og personlig udvikling? Med HÖJSKOLENDK kan du tage på højskole i udlandet sammen med andre unge og danske rejseledere. Det er din chance for at opleve verden på en meningsfuld og eventyrlig måde.
+      </p>
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+       Vælg mellem højskoleophold i eksotiske omgivelser som Bali, Maldiverne og Australien, eller tag på storbyeventyr i metropoler som New York, Tokyo og Rio de Janeiro. Du kan også dykke ned i fremmede kulturer i lande som Indien, Mexico og Bolivia eller få et adrenalinkick i New Zealand og Nepal.
+      </p>
+    </div>
+
+      <!-- Tekstindhold -->
+    <div>
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+    Et højskoleophold i udlandet er meget mere end bare en rejse – det er et unikt møde med andre kulturer, nye venskaber og ikke mindst dig selv. Du får styrket din selvtillid, dit selvværd og kommer hjem med nye perspektiver.
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+     Du kan vælge et kortere ophold i sommerferien (ca. 5 uger) eller et længere forløb på 2-3 måneder i løbet af året – perfekt til sabbatåret. Uanset hvad, får du et eventyr, der rykker dig både fagligt og personligt.
+Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplevelser og fællesskab går hånd i hånd.
+      </p>
+    </div>
+
+     <!-- OPLEVELSER SEKTION -->
+<section class="bg-[#f4f2ec] py-16 px-6 md:px-20 font-serif">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Tekstindhold -->
+    <div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
+       Teambuilding 
+      </h2>
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+        Udvikl dig selv gennem sjove og lærerige teambuilding-aktiviteter sammen med andre unge. Du lærer om samarbejde, konflikthåndtering og stærke fællesskaber – kompetencer, du kan bruge i både studie og arbejdsliv.
+      </p>
+
+       <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
+Kulturoplevelser   </h2>
+      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+        Kom helt tæt på unikke kulturer og historiske steder – fra templer og ruiner til surfkultur og lokale traditioner. Oplevelserne giver dig indsigter, du ikke finder i en bog.
+      </p>
+    </div>
+
+    
 
 </MainLayout>
 

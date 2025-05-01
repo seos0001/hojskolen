@@ -7,6 +7,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
 import bjerg_card from"../assets/images/bjerg_card.webp";
+import hero_image from"../assets/images/hero_image.webp";
 ---
 
 <MainLayout class="bg-[#f4f2ec]">
@@ -15,15 +16,18 @@ import bjerg_card from"../assets/images/bjerg_card.webp";
     
     <!-- Baggrundsbillede -->
     <img
-      src={bjerg_card.src}
+      src={hero_image.src}
       alt="Hero Billede"
       class="absolute inset-0 w-full h-full object-cover z-0"
     />
 
    <!-- Content -->
 <div class="relative z-20 max-w-4xl text-left px-4">
-  <p class="font-italiana text-[4rem] sm:text-[5rem] md:text-[6rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
-    HØJSKOLE I UDLANDET - EVENTYR FOR LIVET
+  <p class="font-italiana md:text-[6rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
+    HØJSKOLE I UDLANDET
+  </p>
+  <p class="font-italiana md:text-[6rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
+    Eventyr for livet
   </p>
 </div>
 
@@ -290,11 +294,9 @@ Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplev
 
   </div>
 </section>
-    
+<Footer />    
 </MainLayout>
 
-<footer>
-</footer>
 
 
 

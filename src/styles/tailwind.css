@@ -4,11 +4,10 @@
 @plugin '@tailwindcss/forms';
 
 @plugin "daisyui";
- {
-}
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* Custom theme fonts */
+  --font-display: "Italiana";
 }
 
 @layer base {

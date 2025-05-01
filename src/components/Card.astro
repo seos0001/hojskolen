@@ -2,41 +2,39 @@
 const {
   land1,
   land2,
-  sommerSkole,
-  cardTitle,
-  cardTitleBagside,
-  cardTextForside,
-  cardTextBagside,
+  land3,
+  land4,
+  land5,
+  land6,
   cardImage,
   cardImageAlt,
   rejsedato,
+  pris,
 } = Astro.props;
 ---
 <div class="card bg-base-100 w-full shadow-sm border-r-0">
 
     <img
       src={cardImage}
-      alt="Shoes" class="border-r-0"/>
+      alt="Billede" class="border-r-0"/>
 
-  <div class="grid grid-cols-2 grid-rows-3 bg-amber-500">
+  <div class="grid grid-cols-2 grid-rows-3 bg-[#FF5900] font-display text-[34px]">
     <div class="text-xl">{land1}</div>
     <div class="text-xl text-right">{land2}</div>
-    <div class="text-xl">text 3</div>
-    <div class="text-xl text-right">text 4</div>
-    <div class="text-xl">text 5</div>
-    <div class="text-xl text-right">text 6</div>
+    <div class="text-xl">{land3}</div>
+    <div class="text-xl text-right">{land4}</div>
+    <div class="text-xl">{land5}</div>
+    <div class="text-xl text-right">{land6}</div>
   </div>
-  <div class="card-body bg-amber-500 border-r-0">
-    <h2 class="card-title">{cardTitle}</h2>
-    <p>{cardTextForside}</p>
-    <div class="grid grid-cols-2 bg-amber-500">
+  <div class="card-body bg-[#FF5900] border-r-0">
+    <div class="grid grid-cols-2 bg-[#FF5900]">
      <div>
         <div class="">Næste rejse</div>
         <div class="næsterejsedato">{rejsedato}</div>
      </div>
      <div>
-        <div class="text-xl">pris</div>
-        <div class="næsterejsedato">pristal</div>
+        <div class="">Pris</div>
+        <div class="pris">{pris}</div>
      </div>
       
     </div>

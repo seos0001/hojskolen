@@ -6,7 +6,6 @@ import { Image } from 'astro:assets';
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
-import bjerg_card from"../assets/images/bjerg_card.webp";
 import hero_image from"../assets/images/hero_image.webp";
 import hest from"../assets/images/hest.webp";
 import bådtur from"../assets/images/bådtur.webp";
@@ -16,246 +15,200 @@ import bil from"../assets/images/bil.webp";
 
 <MainLayout class="bg-[#f4f2ec]">
   <!-- HERO SECTION -->
-  <section class="relative w-full h-[90vh] flex items-center justify-center text-white font-serif overflow-hidden">
-    
-    <!-- Baggrundsbillede -->
-    <img
-      src={hero_image.src}
-      alt="Hero Billede"
-      class="absolute inset-0 w-full h-full object-cover z-0"
-    />
+<section class="relative w-full h-[90vh] flex items-start justify-start text-white overflow-hidden">
+  <img src={hero_image.src} alt="Hero Billede" class="absolute inset-0 w-full h-full object-cover z-0" />
+  <div class="relative z-20 max-w-4xl text-left px-6 sm:px-10 py-12">
+    <h2 class="md:text-[6rem] text-[4rem] leading-[1.1] tracking-tight mb-4 text-[#FF5900] whitespace-nowrap">
+      HØJSKOLE I UDLANDET
+    </h2>
+    <h2 class="md:text-[6rem] text-[4rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
+      Eventyr for livet
+    </h2>
+</section>
 
-   <!-- Content -->
-<div class="relative z-20 max-w-4xl text-left px-4">
-  <p class="font-italiana md:text-[6rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
-    HØJSKOLE I UDLANDET
-  </p>
-  <p class="font-italiana md:text-[6rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
-    Eventyr for livet
-  </p>
-</div>
 
-      <!-- Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="/om-os"
-          class="border border-white text-white px-8 md:px-10 py-3 rounded-full hover:bg-white hover:text-[#FF5900] transition text-sm md:text-base font-semibold"
-        >
-          LÆS MERE
+  <!-- EVENTYR SEKTION -->
+  <section class="py-16 px-6 md:px-20 font-serif">
+    <div class="container mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
+          ER DU KLAR TIL DIT <br /> LIVS EVENTYR?
+        </h2>
+        <p class="mb-6 text-base md:text-lg">
+         HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år, der brænder for oplevelser, fællesskab og at møde nye kulturer. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor du får både rejseeventyr og stærke fællesskaber.
+        </p>
+        <p class="mb-6 text-base md:text-lg">
+         HÖJSKOLENDK er for dig, hvis du drømmer om at rejse med rygsæk, lære om fremmede kulturer, opleve et stærkt fællesskab og få inspirerende undervisning. Du vil være en del af en fantastisk grupperejse sammen med andre unge, og du kan føle dig tryg, da vi er medlem af Rejsegarantifonden.
+Vi glæder os til at lære dig at kende!
+        </p>
+        <a href="/eventyr" class="inline-block border border-black text-black px-8 py-2 rounded hover:bg-[#FF5900] hover:text-white transition font-light uppercase text-sm tracking-wide">
+          VÆLG DIT EVENTYR
         </a>
+      </div>
+      <div>
+        <img src={bil.src} alt="Eventyr billede" class="w-full h-[400px] object-cover shadow-lg" />
       </div>
     </div>
   </section>
 
-  <!-- EVENTYR SEKTION -->
-<section class="py-16 px-6 md:px-20 font-serif">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-    
-    <!-- Tekstindhold -->
-    <div>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
-        ER DU KLAR TIL DIT <br /> LIVS EVENTYR?
-      </h2>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
-        HÖJSKOLENDK er en dansk højskole for unge mellem 18-30 år, der brænder for oplevelser, fællesskab og at møde nye kulturer. Vi tilbyder eventyrlige højskoleophold i udlandet, hvor du får både rejseeventyr og stærke fællesskaber.
-      </p>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
-        HÖJSKOLENDK er for dig, hvis du drømmer om at rejse med rygsæk, lære om fremmede kulturer, opleve et stærkt fællesskab og få inspirerende undervisning. Du vil være en del af en fantastisk grupperejse sammen med andre unge, og du kan føle dig tryg, da vi er medlem af Rejsegarantifonden.<br />
-        Vi glæder os til at lære dig at kende!
-      </p>
-      <a
-        href="/eventyr"
-        class="inline-block border border-black text-black px-8 py-2 rounded hover:bg-[#FF5900] hover:text-white transition font-light uppercase text-sm tracking-wide"
-      >
-        VÆLG DIT EVENTYR
-      </a>
-    </div>
 
-    <!-- Billede -->
-    <div>
-      <img
-        src={bil.src}
-        alt="Højskole eventyr billede 1"
-        class="w-full h-[400px] object-cover shadow-lg"
-      />
+<!-- Forskudte billeder med mere luft -->
+<section class="bg-[#E9E4D4] py-24 px-8 md:px-28 mb-16">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-x-16 gap-y-12">
+    <div class="p-2">
+      <img src={hest.src} alt="Eventyr 1" class="w-full h-[400px] object-cover" />
+    </div>
+    <div class="p-2 md:pt-12">
+      <img src={bådtur.src} alt="Eventyr 2" class="w-full h-[400px] object-cover" />
     </div>
   </div>
 </section>
 
-<!-- TO STORE BILLEDER – FORSKUDT -->
-<section class="bg-white py-20 px-6 md:px-20">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-    
-    <!-- Første billede -->
-    <div class="relative z-10">
-      <img
-        src={hest.src}
-        alt="Højskole eventyr billede 1"
-        class="w-full h-[400px] object-cover shadow-lg"
-      />
-    </div>
-
-    <!-- Andet billede – forskudt -->
-    <div class="relative md:-mt-20">
-      <img
-        src={bådtur.src}
-        alt="Højskole eventyr billede 2"
-        class="w-full h-[400px] object-cover shadow-lg"
-      />
-    </div>
-  </div>
 
 <!-- Tekstindhold -->
-<div class="max-w-3xl ml-0 text-left">
-  <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight mb-6">
+<div class="max-w-3xl mx-auto px-6 md:px-12 text-left">
+  <h2 class="text-3xl sm:text-4xl md:text-5xl mb-15 mt-15">
     REJSE HØJSKOLE
   </h2>
-
-  <p class="mb-4 text-base md:text-lg font-sans font-thin">
-    Tag på højskole i udlandet og oplev et unikt rejseeventyr med stærkt fællesskab og fantastiske oplevelser.
-  </p>
-
-  <p class="mb-4 text-base md:text-lg font-sans font-thin">
-    Med fokus på fællesskab og dannelse kan du bruge dit sabbatår på frivilligt arbejde, vilde adventure- og naturoplevelser, sprogindlæring og personlig udvikling, der styrker din selvtillid og selvindsigt.
-  </p>
-
-  <p class="mb-4 text-base md:text-lg font-sans font-thin">
-    Glæd dig til inspirerende undervisning, der kombinerer læring med leg. Udover et fantastisk eventyr handler det om at finde ud af, hvad der er vigtigt for dig – om at flytte dine grænser og blive en stærkere version af dig selv.
-    Vi tror på, at du kommer hjem med mere mod på livet og en klarere vision for din fremtid.
+  <p class="mb-4 text-base md:text-lg">
+    Tag på højskole i udlandet og oplev et unikt rejseeventyr med stærkt fællesskab og fantastiske oplevelser. Med fokus på fællesskab og dannelse kan du bruge dit sabbatår på frivilligt arbejde, vilde adventure- og naturoplevelser, sprogindlæring og personlig udvikling, der styrker din selvtillid og selvindsigt. Glæd dig til inspirerende undervisning, der kombinerer læring med leg.
+    Udover et fantastisk eventyr handler det om at finde ud af, hvad der er vigtigt for dig – om at flytte dine grænser og blive en stærkere version af dig selv. Vi tror på, at du kommer hjem med mere mod på livet og en klarere vision for din fremtid.
   </p>
 </div>
 
-    <!-- Citat 1 -->
-    <div class="text-center space-y-2 px-15 sm:px-8 uppercase">
-  <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight mb-6">
-   "Oplev verden, lev dine rejsedrømme og få et eventyr for livet."
+<!-- Citat 1 -->
+<div class="text-center mt-12 px-6 md:px-20">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif leading-tight tracking-wide italic mb-30">
+    "Oplev verden, lev dine rejsedrømme og få et eventyr for livet."
   </h2>
-    </div>
+</div>
+<div class="bg-[#E9E4D4] py-10">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl tracking-wide text-center mb-10 font-italiana">
+    HØJSKOLE I UDLANDET – VÆLG DIT EVENTYR
+  </h2>
 
-    </div>
-</section>
+  <section class="grid grid-cols-3 mx-auto gap-4 max-w-7xl">
+    <!-- CARD 1 -->
+    <Card
+      cardTitle="Rejse 1"
+      land1="AUSTRALIEN"
+      land2="VIETNAM"
+      land3="LOMBOK"
+      land4="GILI ISLANDS"
+      land5="NEW ZEALAND"
+      land6="BALI"
+      cardImage="hero.webp"
+      cardImageAlt="bjerg_card"
+      rejsedato="15. januar 2025"
+      bgcolor="bg-[#FF5900]"
+      pris="110.000 kr"
+    />
 
-<section class="grid grid-cols-3 mx-auto gap-4 max-w-7xl mb-24 bg-[#E9E4D4]">
-  <!-- CARD 1 -->
-  <Card
-        cardTitle="Rejse 1"
-        land1="AUSTRALIEN"
-        land2="VIETNAM"
-        land3="LOMBOK"
-        land4="GILI ISLANDS"
-        land5="NEW ZEALAND"
-        land6="BALI"
-        cardImage="hero.webp"
-        cardImageAlt="bjerg_card"
-        rejsedato ="15. januar 2025"
-        bgcolor="bg-[#FF5900]"
-        pris ="110.000 kr"
-  />
+    <!-- CARD 2 -->
+    <Card
+      cardTitle="Rejse 1"
+      land1="INDIEN"
+      land2="NEPAL"
+      land3="VIETNAM"
+      land4="THAILAND"
+      land5="SRI LANKA"
+      cardImage="hero_image.webp"
+      cardImageAlt="foto af mennesker"
+      rejsedato="26. januar 2025"
+      bgcolor="bg-[#FFAD6D]"
+      pris="30.000 kr"
+    />
 
-  <!-- CARD 2 -->
-  <Card
-        cardTitle="Rejse 1"
-        land1="INDIEN"
-        land2="NEPAL"
-        land3="VIETNAM"
-        land4="THAILAND"
-        land5="SRI LANKA"
-        cardImage="hero_image.webp"
-        cardImageAlt="foto af mennesker"
-        rejsedato ="26. januar 2025"
-         bgcolor="bg-[#FFAD6D]"
-        pris ="30.000 kr"
-  />
+    <!-- CARD 3 -->
+    <Card
+      cardTitle="Rejse 1"
+      land1="AUSTRALIEN"
+      land2="VIETNAM"
+      land3="LOMBOK"
+      land4="GILI ISLANDS"
+      land5="NEW ZEALAND"
+      land6="BALI"
+      cardImage="flag.webp"
+      cardImageAlt="bjerg_card"
+      rejsedato="15. januar 2025"
+      bgcolor="bg-[#F4F2EB]"
+    />
 
-  <!-- CARD 3 -->
-  <Card
-        cardTitle="Rejse 1"
-        land1="AUSTRALIEN"
-        land2="VIETNAM"
-        land3="LOMBOK"
-        land4="GILI ISLANDS"
-        land5="NEW ZEALAND"
-        land6="BALI"
-        cardImage="flag.webp"
-        cardImageAlt="bjerg_card"
-        rejsedato ="15. januar 2025"
-         bgcolor="bg-[#F4F2EB]"
-  />
+    <!-- CARD 4 -->
+    <Card
+      cardTitle="Rejse 1"
+      land1="AUSTRALIEN"
+      land2="VIETNAM"
+      land3="LOMBOK"
+      land4="GILI ISLANDS"
+      land5="NEW ZEALAND"
+      land6="BALI"
+      cardImage="hero.webp"
+      cardImageAlt="bjerg_card"
+      rejsedato="15. januar 2025"
+      bgcolor="bg-[#FF5900]"
+      pris="110.000 kr"
+    />
 
-  <!-- CARD 4 -->
-  <Card
-        cardTitle="Rejse 1"
-        land1="AUSTRALIEN"
-        land2="VIETNAM"
-        land3="LOMBOK"
-        land4="GILI ISLANDS"
-        land5="NEW ZEALAND"
-        land6="BALI"
-        cardImage="hero.webp"
-        cardImageAlt="bjerg_card"
-        rejsedato ="15. januar 2025"
-        bgcolor="bg-[#FF5900]"
-        pris ="110.000 kr"
-  />
+    <!-- CARD 5 -->
+    <Card
+      cardTitle="Rejse 1"
+      land1="INDIEN"
+      land2="NEPAL"
+      land3="VIETNAM"
+      land4="THAILAND"
+      land5="SRI LANKA"
+      cardImage="hero_image.webp"
+      cardImageAlt="foto af mennesker"
+      rejsedato="26. januar 2025"
+      bgcolor="bg-[#FFAD6D]"
+      pris="30.000 kr"
+    />
 
-  <!-- CARD 5 -->
-  <Card
-        cardTitle="Rejse 1"
-        land1="INDIEN"
-        land2="NEPAL"
-        land3="VIETNAM"
-        land4="THAILAND"
-        land5="SRI LANKA"
-        cardImage="hero_image.webp"
-        cardImageAlt="foto af mennesker"
-        rejsedato ="26. januar 2025"
-         bgcolor="bg-[#FFAD6D]"
-        pris ="30.000 kr"
-  />
-
-  <!-- CARD 6 -->
-  <Card
-        cardTitle="Rejse 1"
-        land1="AUSTRALIEN"
-        land2="VIETNAM"
-        land3="LOMBOK"
-        land4="GILI ISLANDS"
-        land5="NEW ZEALAND"
-        land6="BALI"
-        cardImage="flag.webp"
-        cardImageAlt="bjerg_card"
-        rejsedato ="15. januar 2025"
-         bgcolor="bg-[#F4F2EB]"
-  />
-</section>
+    <!-- CARD 6 -->
+    <Card
+      cardTitle="Rejse 1"
+      land1="AUSTRALIEN"
+      land2="VIETNAM"
+      land3="LOMBOK"
+      land4="GILI ISLANDS"
+      land5="NEW ZEALAND"
+      land6="BALI"
+      cardImage="flag.webp"
+      cardImageAlt="bjerg_card"
+      rejsedato="15. januar 2025"
+      bgcolor="bg-[#F4F2EB]"
+    />
+  </section>
+</div>
 
 
     <!-- Citat 2 -->
     <div class="text-center space-y-2 px-15 sm:px-8 uppercase">
-  <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight mb-6">
+  <h2 class="text-6xl mb-6 mt-20">
    "UFORGLEMMELIGT HØJSKOLEOPHOLD I UDLANDET"
   </h2>
     </div>
 
       <!-- Højskole i Udlandet SEKTION -->
-<section class="bg-[#f4f2ec] py-16 px-6 md:px-20 font-serif">
+<section class="bg-[#f4f2ec] py-16 px-6 md:px-20">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
     
     <!-- Tekstindhold -->
     <div>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
       Højskole i udlandet for unge – en oplevelse for livetVil du kombinere rejse, fællesskab og personlig udvikling? Med HÖJSKOLENDK kan du tage på højskole i udlandet sammen med andre unge og danske rejseledere. Det er din chance for at opleve verden på en meningsfuld og eventyrlig måde.
       </p>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
        Vælg mellem højskoleophold i eksotiske omgivelser som Bali, Maldiverne og Australien, eller tag på storbyeventyr i metropoler som New York, Tokyo og Rio de Janeiro. Du kan også dykke ned i fremmede kulturer i lande som Indien, Mexico og Bolivia eller få et adrenalinkick i New Zealand og Nepal.
       </p>
     </div>
 
       <!-- Tekstindhold -->
     <div>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
     Et højskoleophold i udlandet er meget mere end bare en rejse – det er et unikt møde med andre kulturer, nye venskaber og ikke mindst dig selv. Du får styrket din selvtillid, dit selvværd og kommer hjem med nye perspektiver.
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
      Du kan vælge et kortere ophold i sommerferien (ca. 5 uger) eller et længere forløb på 2-3 måneder i løbet af året – perfekt til sabbatåret. Uanset hvad, får du et eventyr, der rykker dig både fagligt og personligt.
 Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplevelser og fællesskab går hånd i hånd.
       </p>
@@ -275,7 +228,7 @@ Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplev
       <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
         Teambuilding
       </h2>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
         Udvikl dig selv gennem sjove og lærerige teambuilding-aktiviteter sammen med andre unge. Du lærer om samarbejde, konflikthåndtering og stærke fællesskaber – kompetencer, du kan bruge i både studie og arbejdsliv.
       </p>
     </div>
@@ -285,7 +238,7 @@ Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplev
       <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
         Kulturoplevelser
       </h2>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
         Kom helt tæt på unikke kulturer og historiske steder – fra templer og ruiner til surfkultur og lokale traditioner. Oplevelserne giver dig indsigter, du ikke finder i en bog.
       </p>
     </div>
@@ -295,7 +248,7 @@ Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplev
       <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
         Naturoplevelser
       </h2>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
         Naturen er en stor del af rejsen – snorkling, trekking, kajak, dykning eller safari. Uanset destination venter uforglemmelige og spektakulære naturoplevelser på dig.
       </p>
     </div>
@@ -305,7 +258,7 @@ Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplev
       <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight mb-6 tracking-tight">
         Frivilligt arbejde & Kulturforståelse
       </h2>
-      <p class="mb-6 text-base md:text-lg font-sans font-thin">
+      <p class="mb-6 text-base md:text-lg">
         Få en dybere forståelse for lokale kulturer gennem frivilligt arbejde. Du bidrager til samfundet og får indblik i dagligdagen og livsvilkårene i de lande, vi besøger.
       </p>
     </div>

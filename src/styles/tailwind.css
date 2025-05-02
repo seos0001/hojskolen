@@ -2,25 +2,25 @@
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
-
 @plugin "daisyui";
 
-@theme {
-  /* Custom theme fonts */
-  --font-display: "Italiana";
-}
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  h2,
+  .logo,
+  .card {
+    font-family: "Italiana", serif;
+  }
+
+  p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
   }
 }
 
 @layer components {
 }
+
 @layer utilities {
 }

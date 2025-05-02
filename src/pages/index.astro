@@ -10,6 +10,9 @@ import hero_image from"../assets/images/hero_image.webp";
 import hest from"../assets/images/hest.webp";
 import bådtur from"../assets/images/bådtur.webp";
 import bil from"../assets/images/bil.webp";
+import flag from"../assets/images/flag.webp";
+import bjerg_card from"../assets/images/bjerg_card.webp";
+import hero from"../assets/images/hero.webp";
 
 ---
 
@@ -54,12 +57,14 @@ Vi glæder os til at lære dig at kende!
 
 <!-- Forskudte billeder med mere luft -->
 <section class="bg-[#E9E4D4] py-24 px-8 md:px-28 mb-16 scroll-animate">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-x-16 gap-y-12">
-    <div class="p-2">
-      <img src={hest.src} alt="Eventyr 1" class="w-full h-[400px] object-cover" />
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-x-12">
+    <!-- Første billede løftes lidt op -->
+    <div class="p-2 md:-mt-8 flex items-center justify-center">
+      <img src={bådtur?.src} alt="Eventyr 1" class="max-w-full max-h-[700px] object-contain" />
     </div>
-    <div class="p-2 md:pt-12">
-      <img src={bådtur.src} alt="Eventyr 2" class="w-full h-[400px] object-cover" />
+    <!-- Andet billede skubbes lidt ned -->
+    <div class="p-2 md:mt-8">
+      <img src={hest?.src} alt="Eventyr 2" class="w-full h-[700px] object-cover" />
     </div>
   </div>
 </section>

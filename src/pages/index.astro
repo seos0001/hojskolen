@@ -20,14 +20,15 @@ import hero from"../assets/images/hero.webp";
   <!-- HERO SECTION -->
 <section class="relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
   <img src={hero_image.src} alt="Hero Billede" class="absolute inset-0 w-full h-full object-cover z-0" />
-  <div class="relative z-20 text-center px-6 sm:px-10 py-12 mt-[-300px] scroll-animate">
-    <h2 class="md:text-[6rem] text-[4rem] leading-[1.1] tracking-tight text-[#FF5900] whitespace-nowrap">
-      HØJSKOLE I UDLANDET
-    </h2>
-    <h2 class="md:text-[6rem] text-[4rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
-      Eventyr for livet
-    </h2>
-  </div>
+<div class="relative z-20 text-center px-4 sm:px-10 py-12 mt-[-150px] sm:mt-[-300px] scroll-animate">
+  <h2 class="text-[2.5rem] sm:text-[4rem] md:text-[6rem] leading-[1.1] tracking-tight text-[#FF5900] whitespace-nowrap">
+    HØJSKOLE I UDLANDET
+  </h2>
+  <h2 class="text-[2.5rem] sm:text-[4rem] md:text-[6rem] leading-[1.1] tracking-tight mb-6 text-[#FF5900]">
+    Eventyr for livet
+  </h2>
+</div>
+
 </section>
 
   <!-- EVENTYR SEKTION -->
@@ -49,7 +50,7 @@ Vi glæder os til at lære dig at kende!
         </a>
       </div>
       <div>
-        <img src={bil.src} alt="Eventyr billede" class="w-full h-[400px] object-cover shadow-lg" />
+        <img src={bil.src} alt="bil billede" class="w-full h-[250px] sm:h-[400px] object-cover shadow-lg" />
       </div>
     </div>
   </section>
@@ -92,99 +93,105 @@ Vi glæder os til at lære dig at kende!
     HØJSKOLE I UDLANDET – VÆLG DIT EVENTYR
   </h2>
 
-  <section class="grid grid-cols-3 mx-auto gap-4 max-w-7xl">
-    <!-- CARD 1 -->
-    <Card
-      cardTitle="Rejse 1"
-      land1="AUSTRALIEN"
-      land2="VIETNAM"
-      land3="LOMBOK"
-      land4="GILI ISLANDS"
-      land5="NEW ZEALAND"
-      land6="BALI"
-      cardImage="hero.webp"
-      cardImageAlt="bjerg_card"
-      rejsedato="15. januar 2025"
-      bgcolor="bg-[#FF5900]"
-      pris="110.000 kr"
-    />
+  <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-auto gap-6 max-w-7xl px-4 sm:px-6">
+  <!-- CARD 1 -->
+  <Card
+    cardTitle="Rejse 1"
+    land1="AUSTRALIEN"
+    land2="VIETNAM"
+    land3="LOMBOK"
+    land4="GILI ISLANDS"
+    land5="NEW ZEALAND"
+    land6="BALI"
+    cardImage="hero.webp"
+    cardImageAlt="bjerg_card"
+    rejsedato="15. januar 2025"
+    bgcolor="bg-[#FF5900]"
+    pris="110.000 kr"
+    className="transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+  />
 
-    <!-- CARD 2 -->
-    <Card
-      cardTitle="Rejse 1"
-      land1="INDIEN"
-      land2="NEPAL"
-      land3="VIETNAM"
-      land4="THAILAND"
-      land5="SRI LANKA"
-      cardImage="hero_image.webp"
-      cardImageAlt="foto af mennesker"
-      rejsedato="26. januar 2025"
-      bgcolor="bg-[#FFAD6D]"
-      pris="30.000 kr"
-    />
+  <!-- CARD 2 -->
+  <Card
+    cardTitle="Rejse 1"
+    land1="INDIEN"
+    land2="NEPAL"
+    land3="VIETNAM"
+    land4="THAILAND"
+    land5="SRI LANKA"
+    cardImage="hero_image.webp"
+    cardImageAlt="foto af mennesker"
+    rejsedato="26. januar 2025"
+    bgcolor="bg-[#FFAD6D]"
+    pris="30.000 kr"
+    className="transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+  />
 
-    <!-- CARD 3 -->
-    <Card
-      cardTitle="Rejse 1"
-      land1="AUSTRALIEN"
-      land2="VIETNAM"
-      land3="LOMBOK"
-      land4="GILI ISLANDS"
-      land5="NEW ZEALAND"
-      land6="BALI"
-      cardImage="flag.webp"
-      cardImageAlt="bjerg_card"
-      rejsedato="15. januar 2025"
-      bgcolor="bg-[#F4F2EB]"
-    />
+  <!-- CARD 3 -->
+  <Card
+    cardTitle="Rejse 1"
+    land1="AUSTRALIEN"
+    land2="VIETNAM"
+    land3="LOMBOK"
+    land4="GILI ISLANDS"
+    land5="NEW ZEALAND"
+    land6="BALI"
+    cardImage="flag.webp"
+    cardImageAlt="bjerg_card"
+    rejsedato="15. januar 2025"
+    bgcolor="bg-[#F4F2EB]"
+    className="transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+  />
 
-    <!-- CARD 4 -->
-    <Card
-      cardTitle="Rejse 1"
-      land1="AUSTRALIEN"
-      land2="VIETNAM"
-      land3="LOMBOK"
-      land4="GILI ISLANDS"
-      land5="NEW ZEALAND"
-      land6="BALI"
-      cardImage="hero.webp"
-      cardImageAlt="bjerg_card"
-      rejsedato="15. januar 2025"
-      bgcolor="bg-[#FF5900]"
-      pris="110.000 kr"
-    />
+  <!-- CARD 4 -->
+  <Card
+    cardTitle="Rejse 1"
+    land1="AUSTRALIEN"
+    land2="VIETNAM"
+    land3="LOMBOK"
+    land4="GILI ISLANDS"
+    land5="NEW ZEALAND"
+    land6="BALI"
+    cardImage="hero.webp"
+    cardImageAlt="bjerg_card"
+    rejsedato="15. januar 2025"
+    bgcolor="bg-[#FF5900]"
+    pris="110.000 kr"
+    className="transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+  />
 
-    <!-- CARD 5 -->
-    <Card
-      cardTitle="Rejse 1"
-      land1="INDIEN"
-      land2="NEPAL"
-      land3="VIETNAM"
-      land4="THAILAND"
-      land5="SRI LANKA"
-      cardImage="hero_image.webp"
-      cardImageAlt="foto af mennesker"
-      rejsedato="26. januar 2025"
-      bgcolor="bg-[#FFAD6D]"
-      pris="30.000 kr"
-    />
+  <!-- CARD 5 -->
+  <Card
+    cardTitle="Rejse 1"
+    land1="INDIEN"
+    land2="NEPAL"
+    land3="VIETNAM"
+    land4="THAILAND"
+    land5="SRI LANKA"
+    cardImage="hero_image.webp"
+    cardImageAlt="foto af mennesker"
+    rejsedato="26. januar 2025"
+    bgcolor="bg-[#FFAD6D]"
+    pris="30.000 kr"
+    className="transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+  />
 
-    <!-- CARD 6 -->
-    <Card
-      cardTitle="Rejse 1"
-      land1="AUSTRALIEN"
-      land2="VIETNAM"
-      land3="LOMBOK"
-      land4="GILI ISLANDS"
-      land5="NEW ZEALAND"
-      land6="BALI"
-      cardImage="flag.webp"
-      cardImageAlt="bjerg_card"
-      rejsedato="15. januar 2025"
-      bgcolor="bg-[#F4F2EB]"
-    />
-  </section>
+  <!-- CARD 6 -->
+  <Card
+    cardTitle="Rejse 1"
+    land1="AUSTRALIEN"
+    land2="VIETNAM"
+    land3="LOMBOK"
+    land4="GILI ISLANDS"
+    land5="NEW ZEALAND"
+    land6="BALI"
+    cardImage="flag.webp"
+    cardImageAlt="bjerg_card"
+    rejsedato="15. januar 2025"
+    bgcolor="bg-[#F4F2EB]"
+    className="transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+  />
+</section>
 </div>
 
 
@@ -284,6 +291,8 @@ Med HÖJSKOLENDK får du en tryg og uforglemmelig oplevelse, hvor læring, oplev
 
   document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
 </script>
+
+
 
 <Footer />    
 </MainLayout>
